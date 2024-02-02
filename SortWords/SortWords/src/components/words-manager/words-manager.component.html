@@ -1,0 +1,16 @@
+<div>
+  <input type="text" [(ngModel)]="inputText" placeholder="Ingrese las palabras">
+  <button (click)="sortWords()">Ordenar</button>
+</div>
+
+<div>
+  <button (click)="toUppercase()">Mayúsculas</button>
+  <button (click)="toLowercase()">Minúsculas</button>
+</div>
+
+<div *ngIf="sortedWords.length > 0">
+  <h3>Palabras ordenadas:</h3>
+  <ul>
+    <li *ngFor="let word of sortedWords">{{ word }}</li>
+  </ul>
+</div>
